@@ -1,0 +1,8 @@
+{
+  "mariadb": {
+    "root_password": "password",
+    "db_name": "webapp",
+    "user_name": "webapp_user",
+    "user_password": "passw0rd"
+  }
+}
