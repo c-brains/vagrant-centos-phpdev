@@ -39,6 +39,14 @@ end
   end
 end
 
+# PHP設定ファイル
+remote_file '/etc/php.ini' do
+  source 'templates/php/php.ini'
+  mode '644'
+  owner 'root'
+  group 'root'
+end
+
 # composer インストール
 execute "composer インストール" do
   command "curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer"
