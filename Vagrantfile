@@ -3,9 +3,6 @@
 
 Vagrant.configure(2) do |config|
   config.vm.box = "chef/centos-7.0"
-  if Vagrant.has_plugin?("vagrant-cachier")
-    config.cache.scope = :box
-  end
 
   # VBoxAddition を更新すると、共有フォルダが使えなくなるので更新しない
   config.vbguest.auto_update = false

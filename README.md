@@ -3,8 +3,6 @@
 ## requirement
 
 * Vagrant https://www.vagrantup.com/downloads.html
-* Virtualbox
+* Virtualbox https://www.virtualbox.org/wiki/Downloads
 * vagrant-vbguestプラグイン `vagrant plugin install vagrant-vbguest`
 * vagrant-itamaeプラグイン `vagrant plugin install vagrant-itamae`
-* (optional) vagrant-cachierプラグイン `vagrant plugin install vagrant-cachier`
-
