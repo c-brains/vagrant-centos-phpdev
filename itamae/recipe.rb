@@ -8,6 +8,11 @@ package 'httpd' do
   action :install
 end
 
+# Apache(httpd) 自動起動
+service 'httpd' do
+  action :enable
+end
+
 # Apache用の設定ファイルをテンプレートから作成する
 remote_file '/etc/httpd/conf/httpd.conf' do
   source 'templates/httpd/httpd.conf'

@@ -20,13 +20,13 @@ Vagrant.configure(2) do |config|
     #  :owner => "vagrant",
     #  :group => "apache",
     #  :mount_options => ["dmode=775,fmode=775"]
-    #develop.vm.synced_folder "application", "/var/www/application",
-    #  type: "rsync",
-    #  rsync__args: ["--verbose", "--archive", "-z"],
-    #  owner: "vagrant",
-    #  group: "apache",
-    #  rsync__auto: true,
-    #  rsync__chown: true
+    develop.vm.synced_folder "application", "/var/www/application",
+      type: "rsync",
+      rsync__args: ["--verbose", "--archive", "-z", "--chmod=g+w"],
+      owner: "vagrant",
+      group: "apache",
+      rsync__auto: true,
+      rsync__chown: true
   end
 
   config.vm.provision :itamae do |config|
